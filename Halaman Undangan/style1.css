@@ -1,0 +1,188 @@
+/* General styles for the flat-box */
+.flat-box {
+    font-family: 'Poppins', serif;
+    max-width: 800px; /* Increased max-width for a wider box */
+    margin: 100px auto; /* More margin to make it more prominent */
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Initially hidden for fade-in effect */
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    text-align: center; /* Center-align all text */
+}
+
+/* Fade-in animation */
+.flat-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hover effect for a little interaction feedback */
+.flat-box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the Arabic text */
+.arabic-ayah {
+    font-size: 1.2em;
+    font-family: 'Poppins', serif; /* Make sure to include this font or choose another one */
+    direction: rtl;
+    margin-top: 15px;
+}
+
+/* Styles for the translated Ayah */
+.ayah {
+    font-family: 'Poppins', serif;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 12px;
+}
+/* Styling for the Kedua Mempelai section */
+.KeduaMempelai {
+    text-align: center; /* Center the content */
+    margin: 50px auto;  /* Center the div itself with auto left and right margins */
+}
+
+/* Font styling for the h2 element inside Kedua Mempelai */
+.KeduaMempelai h2 {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-weight: 400; /* Choose a font weight for better visibility */
+    font-size: 2em; /* Adjust the font size as needed */
+    color: #333; /* Optionally set a color */
+}
+
+/* Container for the Mempelai section */
+.Mempelai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0; /* Light background color */
+    padding: 20px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 50px auto;
+    max-width: 800px; /* Set max-width for the container */
+}
+
+/* Styling for the Mempelai content */
+.MempelaiContent {
+    animation: fadeIn 1s ease-in-out, bounce 2s ease-out 1;
+}
+
+/* Heading styles for names */
+.MempelaiContent h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Heading styles for parent names */
+.MempelaiContent h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Centering the image within MempelaiContent */
+.MempelaiContent .anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjusting size for different screen widths */
+.MempelaiContent .anim img {
+    width: auto;
+    max-width: 50%;
+    padding: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+    .Mempelai {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .MempelaiContent .anim img {
+        max-width: 70%; /* Adjust the image size for mobile */
+    }
+}
+.Resepsi {
+    border: 2px solid #eeeeee;
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(221, 221, 221);
+
+    /* Tambahkan animasi popup */
+    animation: fadeInPopup 0.8s ease forwards;
+}
+
+
+
+.Resepsi h2 {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-weight: 400; /* Choose a font weight for better visibility */
+    font-size: 2em; /* Adjust the font size as needed */
+    color: #333; /* Optionally set a color */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+.Resepsi p {
+    font-family: 'Poppins', sans-serif;  /* Same font for consistency */
+    font-size: 1.2em;  /* Adjust font size for paragraph */
+    color: #666;  /* Lighter text color */
+    margin-top: 0;  /* Remove top margin */
+    line-height: 1.6;  /* Improve readability with line height */
+    justify-content: center;
+    text-align: center;
+}
+
+.Resepsi p {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.Resepsi button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: medium;
+    text-align: center;
+    justify-content: center;
+}
+
+.Resepsi button:hover {
+    background-color: #555;
+}
+
+.Resepsi button img {
+    width: 12pt; /* Ukuran lebar gambar diatur menjadi 12pt */
+    height: 16pt; /* Tinggi gambar juga diatur menjadi 12pt */
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+}

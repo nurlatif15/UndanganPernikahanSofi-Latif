@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    text-align: center;
+    background-image: url('img/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.hero h1{
+    color: rgb(0, 0, 0);
+    border-color: black;
+    text-shadow: #ccc;
+} 
+/* Create a semi-transparent overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% transparency */
+    z-index: 1;
+}
+
+/* Ensure content is displayed above the overlay */
+.hero h1,
+.hero h2,
+.hero button {
+    position: relative;
+    z-index: 2;
+}
+/* Default style for PC (desktop) */
+.logo1 {
+    width: 800px;
+    height: 200px;
+    position: relative;  
+}
+
+
+/* Style for mobile devices (max-width 768px) */
+@media only screen and (max-width: 768px) {
+    .logo1 {
+        width: 400px;
+        height: 100px;
+        align-items: center;
+    }
+}
+@media (max-width: 600px){
+    .logo1 {
+        width: 400px;
+        height: 100px;
+        align-items: center;
+    }
+    
+}
+@media (max-width: 360px){
+    .logo1 {
+        width: 200px;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: center; /* Memusatkan secara horizontal */
+        align-items: center;    /* Memusatkan secara vertikal */
+
+    }
+    
+}
+
+h1 {
+    font-size: 15px;
+    font-family: "Gowun Dodum";
+}
+
+h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    font-family: 'Pacifico';
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(255, 177, 242);
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    align-items: center;
+}
+#popup {
+    text-align: center; /* Center-aligns the content inside the popup */
+}
+
+#close-popup {
+    margin: 0 auto; /* Centers the button horizontally */
+    display: block; /* Allows the margin auto to take effect */
+}
+
+.popup.active {
+    display: block;
+}
+
+
+
+
+
+/* FONT */
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* END FONT */
+/* pacifico */
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 200;
+    font-style: normal;
+  }
+  /* pacifico end */
+
+  /* Additional styles for mobile compatibility */
