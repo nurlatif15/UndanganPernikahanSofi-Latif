@@ -52,6 +52,7 @@
   
   /* Tombol */
   .tombol-buka img {
+    margin-top: -30px;
     width: 200px;
     transition: transform 0.3s ease;
   }
